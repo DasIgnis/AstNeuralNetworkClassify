@@ -1,0 +1,29 @@
+.body-style {
+	display: grid;
+	text-align: center;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-style {
+	padding: 20px;
+	background-color: #f56942;
+	color: white;
+	grid-column: span 3;
+}
+
+.result {
+	padding: 10px;
+	color: white;
+}
+
+.btn-primary {
+	background-color: #f56942;
+}
+
+.crypto {
+	background-color: #fa2a2a;
+}
+
+.key {
+	background-color: #dbc500;
+}

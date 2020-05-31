@@ -1,0 +1,31 @@
+<div class="body-style">
+
+	<div class="header-style">Демонстрационное приложение для нейросети-классификатора </div>
+
+	<div></div>
+	<div style="margin-top: 20px; margin-bottom: 20px;">
+			<div class="custom-file">
+				<form action="/api/upload" method="post" enctype="multipart/form-data">
+					<input (change)="fileChange($event)" type="file" class="custom-file-input" id="inputGroup">
+				</form>
+				<label class="custom-file-label" for="inputGroup">Выбрать файл</label>
+			</div>
+	</div>
+	<div></div>
+	
+	<div class="text-center mt-2 mb-5" style="grid-column: span 3">
+		<button class="btn btn-primary" (click)="upload()">Проверить</button>
+	</div>
+	
+	<div *ngFor="let result of results">
+		<div></div>
+		<div class="text-center result"
+			[ngClass]="{crypto: result.type==1, key: result.type==2}">
+			{{result.file}} тип: <span *ngIf="result.type==1">Криптомайнер</span><span *ngIf="result.type==2">Кейлоггер</span>
+		</div>
+		<div></div>
+	</div>
+
+</div>
+
+<router-outlet></router-outlet>
